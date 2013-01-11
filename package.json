@@ -1,16 +1,16 @@
 {
   "name": "google-calendar",
   "description": "Google Calendar Connection for Node.js",
-  "homepage": "https://github.com/berryboy/google-calendar",
+  "homepage": "https://github.com/raineorshine/google-calendar",
   "repository":{ 
       "type" : "git",
-      "url" : "https://github.com/berryboy/google-calendar"
+      "url" : "https://github.com/raineorshine/google-calendar"
     },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./GoogleCalendar",
   "dependencies": {
     "restler": "2.0.1",
 		"express":"2.5.9",
-		"google-oauth":"0.0.2"
+		"google-oauth":"0.0.3"
   }
 }

@@ -15,8 +15,16 @@ function GoogleCalendar(consumer_key, consumer_secret,callback_url){
     callback_url);
 }
 
-GoogleCalendar.prototype.getGoogleAuthorizeTokenURL = function(callback) {
-	return this.oauth.getGoogleAuthorizeTokenURL(['https://www.googleapis.com/auth/calendar'], callback)
+GoogleCalendar.prototype.getGoogleAuthorizeTokenURL = function(params, callback) {
+
+  if(arguments.length < 2) {
+    callback = arguments[0];
+    params = {};
+  }
+
+  params.scopes = ['https://www.googleapis.com/auth/calendar'].concat(params.scopes || []);
+
+	return this.oauth.getGoogleAuthorizeTokenURL(params, callback);
 }
 
 GoogleCalendar.prototype.getGoogleAccessToken = function(params, callback) {
